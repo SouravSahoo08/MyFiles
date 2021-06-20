@@ -1,0 +1,127 @@
+Name : Sourav kumar sahoo		
+Branch : CSE-C				
+Redg. No.: 1901289179			
+roll No. : 30				
+----------------------------------------
+
+Q. Define object class.
+A. Object class is the default super class of every 
+Java class.
+It is present in java.lang package.
+The object class provides some common behaviours to all 
+objects such as objects can be compared, objects can be cloned
+etc.
+
+Q. Define all the methods of object class.
+A. There are in total 11 methods in object class:
+	1) getClass();
+		- returns the class objectof "this" object
+`		  or the current object and used to get actual
+		  runtime class of the object.It is also
+		  used to get metadata of this class.
+	example:
+		public class ObjectClass{
+			public static void main(String[] args){
+			String obj = new String("Sourav");
+			System.out.println(obj.getClass()); // output : class java.lang.String
+		}
+	}	
+
+	2) hashCode();
+		- returns the hashcode number for the object.
+	example:
+		public class ObjectClass{
+			public static void main(String[] args){
+			ObjectClass obj = new ObjectClass();
+			System.out.println(obj.hashCode()); // output : 1521118594
+		}
+	}
+	3) equals();
+		- compares the given object to this object.
+	example:
+		public class ObjectClass{
+			public static void main(String[] args){
+			ObjectClass ob1 = new ObjectClass();
+			ObjectClass ob2 = new ObjectClass();
+			ObjectClass ob3 = ob2;
+			System.out.println(ob1.equals(ob2)); //false
+			System.out.println(ob3.equals(ob2)); //true
+		}
+	}
+	4) clone();
+		- creates and returns the exact copy/clone of 
+		  this object.
+	example:
+	class Student18 implements Cloneable{  
+	int rollno;  
+	String name;  
+  
+	Student18(int rollno,String name){  
+	this.rollno=rollno;  
+	this.name=name;  
+	}  
+  
+	public Object clone()throws CloneNotSupportedException{  
+	return super.clone();  
+	}  
+  
+	public static void main(String args[]){  
+	try{  
+	Student18 s1=new Student18(101,"amit");  
+	  
+	Student18 s2=(Student18)s1.clone();  
+  
+	System.out.println(s1.rollno+" "+s1.name);  
+	System.out.println(s2.rollno+" "+s2.name);  
+  
+	}catch(CloneNotSupportedException c){}  
+  
+	}  
+	}  
+
+	5) toString();
+		-returns the string representation of 
+		 this object.
+	example:
+		public class ObjectClass{
+			public static void main(String[] args){
+			int a =10;
+			System.out.println(Integer.toString(a));
+		}
+	}
+	6) notify();
+		- wakes up single thread waitng on this 
+		  objects's monitor.
+	7) notifyAll();
+		- wakes up all the threads waiting on this 
+		  objects monitor.
+	8) wait(long timeout);
+		- causes the current thread to wait for 
+	    	  the specified milliseconds until another
+		  thread notifies.
+	9) wait(long timeout,int nanos);
+		- causes the current thread to wait for the
+		  specified milliseconds and nanoseconds
+		  until another thread notifies.
+	10) wait();
+		- causes the current thread to wait, until
+		  another thread notifies.
+	11) finalize();
+		- this method is invoked by the Garvage 
+		  collector boefore object is being garbage
+ 	   	  collected.
+	example:
+		public class ObjectClass{
+			protected void finalize(){
+			System.out.println("finalize method is called");
+			}
+			public static void main(String[] args){
+			ObjectClass ob1 = new ObjectClass();
+			ob1=null;
+			System.gc();
+			System.out.println("garbage collector is called");
+		}
+	}
+	/* output:
+	 * garbage collector is called
+	 * finalize method is called  */

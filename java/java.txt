@@ -1,0 +1,2551 @@
+What is java?
+Java is very simple, 
+             robust,
+             high level, 
+             secured,
+             distributed,
+             dynamic, 
+             multithreaded, 
+             platform independent, 
+             object-oriented programming language.
+
+History of Java :
+-----------------   
+Java was developed by James Gosling in SUN micro systems in 1990’s for developing internet applications. Its first version is released in January 23, 1996.
+
+Why Java?
+----------
+Java is an object oriented platform independent computer programming language, mainly designed to develop internet/web applications.
+
+
+What is a programming language?
+---------------------------------
+-Whenevre we want to establish some communication between human and computers at that time we need to go for programming language.
+-Actually communication means developing some application.
+-Communication does not mean using an application.
+-Any one can use one application but All can not develope the application.
+-Those having the knowledge on programming language then only can able to develope the application.
+
+What is an application?
+-----------------------
+Application--->collection of programs.
+program------->collection of multiple functionality
+function------>collection of instructions
+instruction--->collection of tokens means an instruction.(Each and every statement present in a program is known as an instruction)
+token--------->Any smallest individual part of a program is known as a token.
+
+
+final keyword:
+--------------
+This final keyword can be applicable to a variable/method/class
+
+final class Demo{
+//
+
+}
+-if we will declare a class as final class then no other class can extend my final class.
+
+class DemoSub extends Demo{-----compilation error.
+//
+}
+
+
+final keyword with a variable
+-------------------------------
+
+class Demo{
+  final int x=10;
+  x=15;//compilation error
+}
+
+-once we will declare a variable as a final variable then assigning a value is mandatory.
+-and a final variable will be treated as a constant.
+-once we will assighn a value to a final variable then reassighning that varible is immposible because that will be treated as a constant.
+
+
+final keyword with a method:
+----------------------------
+class Demo{
+  final void m1(){
+     s.o.p("hello");
+  }
+  void m2(){
+     s.o.p("hii");
+  }
+}
+
+class DemoSub extends Demo{
+     @override
+     void m2(){
+        s.o.p("welcome");
+      }
+
+    //A final method can not be overriden
+    @override
+    void m1(){---------->compilation error
+     //body
+    }
+}
+
+-A final method we can not override in sub calsses.
+
+//linking section 
+#include<stdio.h>
+//execution area---->main function is an userdefined function having the predefined syntax.
+void main()
+{
+printf("hii");//hii
+}
+
+Types of programming paradigm:
+------------------------------
+The time to time changes has happened to the programming world is nothing but the programming paradigm.
+
+there are two types of programming paradigm
+1.imparitive
+   1.procedure oriented-->c,c++(standalone app)
+   2.object oriented-->java(remotebased app)
+   3.parallal procesing-->java,c,c++(remotebased app)
+2.declarative
+   1.logical-->hexa,ml(research oriented app)
+   2.functional-->python,js(research as well as iot based, data science)
+   3.database processing-sql,plsql(this is a common language for all app)
+
+
+Types of Application
+1.standalone application--->those applications which are specific to only one computer then we can say that this is a standalone application.
+                            Any installable software is standalone application/desktop application
+
+      a>console based standalone application-whatever program we are writting using comand prompt/console to get the output is known as console based SA.
+      b>desktop based standalone application-A standalone application having the GUI environment is Desktop based SA.
+2.remotebased application(Any non-instalable software is remotebased application)
+    a>web application/internet applications
+    b>distributed application---->webservises(SOAP,REST)
+3.mobile application
+4.iot based application
+5.research oriented application
+
+Types of computer languages:
+----------------------------
+-High level languages--->Any human understandable language is nothing but high level prog language.
+-middle level languages--->it is a combination of high level and machine level code.
+-Machine level/executable/binary codes(0/1)---->these are the combination of 0/1
+
+steps to write and execute a program:
+------------------------------------
+step1-preparing our source code.(prog1.c/prog1.java/prog1.py)--->high level prog language
+cProg:
+--------
+  prog1.c(source code)--->programmer
+    |
+  compile the prog---->c compiler(s/w)---->compile code
+  (prog1.o/prog1.exe(windows)/prog1.mac(ios)/prog1.obj(unix/linux))--->executable formatted file
+    |run/execute
+   o/s(control of c prog)
+    |
+  output
+
+.c,.exe,.class------>extentions--->meta data---->data about data
+   
+java prog:
+----------
+
+   prog1.java(source code)---->programmer will prepare
+       |
+   compile the prog----->java compiler(s/w)----->compiled code
+     (prog1.class(windows/ios/unix/linux))------>byte code---->middle level
+       |run/execute
+      jvm(control of java prog)-->jvm can able to read the .class file can able to conver this file into executable format and also
+       |                           can able to process the file to get the output
+      output      
+   
+Types of translators:
+---------------------
+1.compiler(High level prog)---->then in case of compiler,it will take the whole code at a time for translating so that it will take less time.
+2.interpretors(High level prog)--->then interpreter checks the program line by line so it will take more time comparing to compileres.
+3.Assemblers(In Assembly level prog lang)
+
+
+#include<stdio.h>
+void main()
+{
+----------//
+----------
+-----------//
+----------//
+}
+
+what is platform?
+-----------------
+platform=os+architechture of your processor.
+
+
+Platform dependency and platform independency
+---------------------------------------------
+-c is a platform dependent language. 
+-java is a platform independent language.
+
+Why java is platform independent and why c is platform dependent?
+-----------------------------------------------------------------
+-in general the language which generates executable code after compilation those
+languages are known as platform dependent language.
+-because the executable code format(.exe/.o/.obj/.mac),these are specific to only 
+one operating system i.e .exe can be understand by windows but the .exe can not 
+understand by linux.
+-if a language generates the bytecode(.class) after compilation then that prog.
+lang. is platform independent.
+
+-Though c prog. language generates the executable code after compilation this 
+is the resn why c is a platform dependent laguage.
+-Though java generates the bytecode after compilation this is the resn why java is a 
+platform independent language.  
+
+Why we need to go for java?
+---------------------------
+-java is an object oriented programming language.
+
+when internet came into market
+             |
+thought of sharing program
+             |
+       Encapsulation(backbone oop)
+             |
+            oop
+             |james gossline
+            OAK
+             |
+            java(SUN MICOSYSTEM---->james gossline was the lead of that team)
+
+
+why java----->why encapsulation
+--------------------------------
+
+there are 2 types variables we can declare inside the c prog.
+1.global:the variable for which we can create only one copy for a single program.--->with the same name variable will be created only once in our memory
+2.local:the variable for which we can create multiple copies for a single profram.--->with the same name we need to create multiple memory locations
+
+-for every variable there are two 4 properties available.
+1.datatype associated with that variable.
+2.scope of that variable
+3.value of that variable.
+4.lifetime of that variable.
+
+Global variable:
+-----------------
+Advantages:
+-----------
+->Global variable is one of the biggeset feature in procedure oriented language.
+->because by declaring once we can use this variable at one place in the program and the scope of this variable is all over the program.
+->in case of global variable always the update value will be taken.
+Drawbacks:
+----------
+->by using global variable we can not provide proper security to our data.
+->Any programmer at any time can access that data ,so he/she can also modified the value at any time.
+->the lifetime of global variable is depends on the program lifetime so its not about the uses of global variable,whether you are accessing or not accessing the
+global variable that does not matter,once you will create one global variable then it will occupy the memory from begining to end.
+
+
+usecase-->banking app
+---------------
+#include<stdio.h>
+
+int acno=1074743678438;//delete
+
+void deposite()------------->x developer--->bbsr--Team1
+{
+}
+
+void withdraw()----------->y developer---->hyd---t2
+{
+}
+
+void gethomeloanDTLS()----->z developer---->blr--t3
+{
+}
+void main()
+{
+ 
+}
+
+->the above program what i have written is in c programming lang.
+->so here i have used a global variable acno.
+->here i have written 3 functions 
+  1.deposite()-->it's required account number
+  2.withdraw()-->it's required account number
+  3.gethomeloanDTLS()-->it's not required account number.
+
+->deposite function is developing by x developer,withdraw function is developing by y developer,gethomeloanDTLS function is developing by z developer.
+->Z developer who is developing gethomeloanDTLS() function he does not require acno data but still he can able to access that data because acno has declared 
+as global variable.
+->There is no proper separation between related data and unrelated data.
+->so z developer can modify the acno.
+->which will directly impact on deposite() function and withdraw() function.
+->So while developing application if we are sharing our program accross multiple developers then global variable declaration will be a biggest drawback.
+->So we need to provide proper separationa and we need to bind related data with related function.
+->so we need to go for ENCAPSULATION concept.
+->Encapsulation means binding the related data with related functionality.
+->class is the base for encapsulation.
+->By the help of object oriented programming,by the help of Encapsulation and by the help of class concept we can overcome the problem of global variable declaration.
+and data insecurity.
+->By the help of Encapsulation we can provide the data security. 
+
+->Just like the following example.
+
+Encapsulation -->the thought of binding related data with related functionality is known as encapsulation.
+x--y
+------
+class Bank
+ {
+   int acno=1074743678438;//delete
+
+void deposite()------------->x developer--->bbsr--Team1
+{
+}
+
+void withdraw()----------->y developer---->hyd---t2
+{
+}
+
+}
+
+z
+-----
+class Loan
+{
+  void gethomeloanDTLS()----->z developer---->blr--t3
+ {
+   
+ }
+}
+
+java has devided into 3 modules.
+1.J2SE--->java 2 standard edition(core java)--->you can able to develope standalone appl.
+2.J2EE--->java 2 enterprise edition(Adv. java)-->Remote based appl
+3.J2ME(outdated)--->java 2 micro/mobile edition--->these are used to develop the mobile application
+
+
+java environment:
+------------------
+To write any java program we required
+1.Editor
+2.java compiler
+3.library
+4.jvm(java virtual machine)-->this jvm is responsible to execute my java program.
+
+jdk
+---
+-it is java developement kit. it is an instalable software(desktop application)
+What jdk contains?
+-java compiler
+-java library
+-jvm
+
+
+C prog.
+--------
+#include<stdio.h>
+void main()
+{
+  int x;
+  x=5;
+  if else  for while
+}
+language fundamentals:
+------------------------
+Identifiers-These are some names what we are using in our program(these names may be a variable name/function name/class name...any name i  am using in my prog.)
+Keyword: these are some reserved words which meaning has already defined inside our library. 
+Data types:these are some keywords or userdefiened word what we are using in our program to define which type of data i am using in my program.
+ 
+How many types of datatypes available?
+-------------------------------------
+-there are two types of datatype available in any programming laguage.
+-every datatype having the size and range as their property.
+int--->4byte range--2^-31 to 2^31
+10/123/14142-----1143674554747657
+1.predefined datatypes
+   1.primitive datatype:the datatypes which we are using to represent basic fundamental data.
+                        -the basic fundamental datas means those data which we can not normalize.
+                        -if i will take some example of basic fundamental data then i can take a number/fractional value/character/boolean(true/false)
+                        -the datatype examples are int,byte,short,long,float,double,char,boolean
+   2.derived datatype:Derived datatype means which are coming from primitive datatype i.e without primitive datatype we can not think about derived dtatype.
+                     -Whenever there is a requirement that we want to represent multiple similar data elements in single unit at that time we need to go for derived 
+                      datatype concept.
+                      -Array:
+                      -------
+                       int arr[];
+                       int *ptr;
+2.userdefined datatypes:Whenever there is a requirement that i want to represent multiple dissimilar data elements in a single unit we need to go for userdefined datatype
+                        concept.
+                        -for example student data/teacher data/bank data/customer data e.t.c
+                        -incase of c prog language we can go for structure concept or we can go for union concept to create the userdefined datatypes in our program
+                        -incase of java we can use the class concept to define userdefined datatype.
+
+struct Student
+ {
+   int sroll;
+   Char[] sname;
+   float smarks;
+   char[] smail;
+ };
+
+struct Student s1;
+Literals:
+--------
+-the constant data value what we are using in our program is known as the literals.
+
+int x=100;
+here 100 represents the literal
+-we are using integer literals/floating literals/char literals/string literals
+
+Variables:
+---------
+-it is just only a name,which points to a memory address.
+-variable is nothing but it is a reference only which refers to a memory location.
+
+int x=100;------>x---->points to a memory address(let assume the address 2089)--->here controller will create 4 bytes of memory and x
+                       will point to that memory and x will point to the base address of that memory.
+
+Methods:
+--------
+-Whatever we are doing with function the same we can do with a method.
+-the syntax and the prperty all are same for a method and function.
+-if you are using some functionality not within the class, you are using independently these are known as functions.
+-if the same functionality if you are using inside the class then that is known as methods.
+-basically we can there is no difference between a method and a function.
+-These are two different terms.
+
+Note :
+------
+-in java we can not write a single program without class concept.
+-so whatever functionality you will use in java program all we can call those one one method.
+-thyere is no term like functions in java.
+-in java we have only one term that is method.
+Blocks
+----------
+-A block means a set of lines of code which present inside the { and }
+{
+-------
+---------
+---------
+}
+
+IDE
+----
+-integreted developement environmrnt.
+Why we need to go for IDEs, if we can able to write the program by the help of notepad then what is the requirement that i need to 
+for IDEs.
+-We need to go for an IDE because to write/test/debug/compile/run/deploy e.t.c then we need to go for IDE concept.
+-Basically IDE is software which is collection of multiple other softwares.
+-The complete environment what we require to write/compile and to run our program that we can get by the help of one IDE.
+-Eclipse, codeblocks, spyder, netbeans,sts, anaconda these are some examples of different IDEs.
+
+To write any program what are the different software we required.
+-----------------------------------------------------------------
+-Editor
+-command prompt
+-compiler
+-server
+-database supported libraries
+
+
+JVM(java virtual machine):
+--------------------------
+Why we need to go for jvm ?
+what is jvm?
+what benifite i will if i will go for jvm?
+
+Byte code:
+------------
+-The compiled code of any java program is known as byte code.
+-byte code is only the name of the format of that file which we are getting after the compilation of any java program.
+-this byte code extended file can be represented in .class extension.
+
+prog1.java(source file)
+     |compile
+prog1.class(compiled code/byte code)
+     |excute/run---who is responsible to execute your byte code---jvm is responsible
+    o/p
+
+
+
+prog1.c
+   |compile
+prog1.exe/prog1.o(compiled code/executable code)(this .exe and .o file are specific to windows os)
+   |execute/run---in c prog who is responsible to run a c prog---os is responsible
+  o/p
+
+-In c program the compiled code what we are getting that present in executable format, so our os can able to handle that executable file .
+-But if we will go for java then java compiled code is present in byte code, and that byte code os can not able to understand.
+-so in case of java program we need to go for one extra software that is jvm software.
+-the jvm software has provided by the sun microsystem currently occupied by oracle.
+-when we will download jvm simply our os will provide some space for that jvm software.
+-In case of java programming execution os does not play any role,for execution of a java program jvm is completely responsible.
+
+What is jvm?
+------------
+-What is jvm
+--------------
+-it is just only a software/ it is an application provided by the sun microsystem.
+-jvm stands for java virtual machine.
+-jvm helps us to execute our java program
+why people are calling this software as java virtual machine.
+-------------------------------------------------------------
+java-Though this software we are using for java programs thats why we are calling it as jvm.
+
+virtual-->virtual means imagianary.
+----------------------------------
+there types of memory allocation we can perform in our programs.
+1.static memory allocation-->compile time memory
+2.dynamic memory allocation-->run time memory
+
+if the memory is fixed i.e if we will go for the primitive types like
+int-->4 bytes----float--->4 bytes------char-----1byte then we can go for static memory allocation.
+-its not like that we can not allocate dynamic memory for primitive types.
+
+-But if you want a growable memory/resizable memory i.e if we will go for userdefined datatypes like class then
+we need to go for dynamic memory allocation.
+
+-In java we can not think about static memory allocation because in java we can not write a single program without the help of class
+concept.
+-so for classes we have to allocate dynamic memory.
+-And dynamic memories can not be allocated at compilation time these needs to be allocate at runtime.
+-Why?
+-----
+-because java depends on dynamic loading concept.
+
+class Student
+{
+ int roll;
+ String name;--"ramesh"  "shehashis"
+}
+
+-Whatever we are doing at run time that is known as imaginary.
+-so that we can say this software as an imaginary/virtual software.
+
+machine:
+-----------
+-jvm will perform multiple task automatically so that we are calling this software as a machine.
+
+
+static loading vs dynamic loading:
+----------------------------------
+-loading the data members and member functions from secondary memory to main memory and allocating memory to these datas 
+and function before execution starts or before executing main() function
+is known as static loading.
+
+Dynamic loading :
+----------------
+-loading the datas and function from secondary memory to main memory and allocating the memory to these datas and functions at the time of execution or 
+at the time of main function execution is known as dynamic 
+loading.
+-loading means transfering a file from one location to another location just like downloading.
+-how jvm works---->Architechture of jvm.
+
+OOPs:
+-----
+these are nothing but these are principle to write any oo program.
+1.Encapsulation--->data security
+2.polymerphism--->flexbility
+3.inheritance--->reusability
+
+Encapsulation:
+---------------
+Encapsulation is the concept of binding the data members with the functions.
+-By the help of class and object concept we can implement the concept of encapsulation.
+class:
+--------
+-class is an userdefined data type.
+-class is the base for encapsulation
+-class is structure/design/model in which we can bind the data members and member functions.
+-class is a fully implemented structure.
+-Without an object there is no meaning to write any class.
+
+usecase:this defines the relation between class and object, why it is compulsory to declare an object for a class.
+-------
+Let us assume we are the tv manufacturing company.
+-suppose our eng. hava designed one model s35.
+-s35 having different  functionalities.
+-suppose i will consider this model as a class.
+-suppose i will provide this model to my customer.
+-then my cunstomer can not able to access that tv.
+-in order to use this tv model i have to create some physical tvs.
+-in programming how can create physical tvs.
+-so here we need to allocate some memory to this class.
+-in java we can allocate only synamic memories.
+-by the help of an object i can allocate dynamic memory to this class.
+-how can i create an object.
+-by the help of new keyword we can crete an object.
+-When ever in our program we will use a new keyword our jvm  can able to understand that programmer wants to allocate some dynamic
+memory for a class.
+
+syntax to create any object:
+----------------------------
+className referencename=newKeyword callConstructor;
+ 
+class S35
+{
+  void getsound()
+   {
+    System.out.println("sounds");
+   }
+  void connectWithinternet()
+   {
+    System.out.prinln("just on your wify");
+   }
+
+  public static void main(string[] args)
+   {
+    S35 s1=new S35();
+    S35 s2=new S35();
+    S35 s3=new S35();
+    s1.getsound();
+    s2.getsound();
+    s3.getsound();
+    int x=5;
+    x++;
+    }
+}
+
+
+
+#include<stdio.h>
+
+void m1()
+ {
+  ------
+}
+
+void m2()
+  {
+---------
+}
+
+void main()
+{
+m1();
+m2();
+}
+
+-----------------------
+
+class Student
+{
+  void getmarks()
+   {
+    System.out.println("go to results");
+   }
+  void getcirtificate()
+   {
+    System.out.prinln("download certificate");
+   }
+
+  public static void main(string[] args)
+   {
+    Student abhishek=new Student();
+    Student rosalin=new Student();
+    Student ramesh=new Student();
+   }
+}
+
+
+class---->model/structure--->S35,Student
+
+objects--->physical existance-->s1/s2/s3,abhishek/rosalin/ramesh
+
+if i will go for class and object ratio then it will be 1:n
+
+How mant diffrent types of members i can declare inside a class:
+-----------------------------------------------------------------
+1.variable 
+  1.static variables
+  2.non-static variables
+  3.local variables
+2.methods
+  1.static methods
+  2.non-static methods
+3.blocks
+  1.static blocks
+  2.non-static block
+4.constructor
+  -constructor is always a non-static member of a class.
+  -we can not declare a constructor as a static member.
+
+Note:
+-----
+There are two types of memory will be allocated for a class member.
+1.Context memory/class memory--->static members(The responsibility of a context memory is to hold the static members)
+2.object memory----------------->Non-static members/instance members()The responsibility of an object to hold the instance members)
+-Both the context memory and object memory are dynamic memory allocation only.
+
+Why we need to go for an object?
+---------------------------
+-if we will go for a class concept the each class having some members,some data members and some member function.
+-inorder to use those members we need to allocate some memory first.
+-inorder to allocate some dynamic memory to the non-static class members we need to go for an object.
+What is an object?
+------------------
+-Instance of a class only is known as an object.
+-Instance means the dynamic memory allocation.
+-Every object is an instance but every instance does not mean it is an object.
+What an object contains?
+-An object contains only the data apart from data an object never contains any other thing.
+
+What is a behaviour of an object?
+-the methods what are associated with an object is known as behaviour of an object.
+
+What is the state of an object?
+---------------------------------
+-the state of an is tentative.
+-the data available in an object will change from statement to statement or from time to time.
+
+Till what period of time one object can exist.
+----------------------------------------------
+-Untill and unless the reference is available at that period of time the object will exist.
+
+Where we can use an object?
+-------------------------------
+we can use an object inside the scope where it has declared.
+
+In how many places we can create an object?
+--------------------------------------------
+-In 5 diffrent places i can declare an object.
+1.As a static variable
+2.As a non-static variable 
+3.As a method argument 
+4.As method return type
+5.As local variable 
+
+Types of variable
+-----------------
+1.static variable---->class level variable-->For one class one copy of this variable will be created
+2.Non-static variable-->object level variable-->For one class multiple copy will be create and for one object one copy will be created.
+3.local variable--->method level variable-->One copy will be create for one method,we can create multiple local variables for a class in multiple methods with the same name
+
+If we will go for static variable and non static variable then we can not create multiple new variable with same name inside the same class
+but if will go for local variable then we can create multiple new variables with the same name within the same class.
+-the name of local variable and the name of nan-static or static variable can be same.
+
+-Incase static variables and non-static variables,these variable are act as a global variable for a java prog/java class.
+-But it will not act as an global variable for the whole application
+-Global variable concept is deifferent and static/non static variable concept different.
+
+Default intialisation:
+------------------------
+-it means if we are not assigning any value to a variable explicitely then it is responsibility of jvm that jvm will assign some default value to my variables.
+-Default initialization concept is applicable for static variable and for a non-static variable, it is not apllicable to a local variable.
+-The above statement means without assigning any value we can use static/non-static variables but without value we can not use a local variable.
+
+-Why we can not access a local variable without initilazation?/Why default intialization is not applicable to local variable.
+------------------------------------------------------------------------------------
+-There is a standing rule in java that we can not use any type of variable without any value.
+-The value should be present when we are using any variable.
+-But in case of static variable and in case of non static variable if we are not assigning any value then jvm will assing some default value depensing upon the datatype
+-But jvm is not responsible for the local varible.
+
+Why?
+----
+because jvm can acces over the class and object but jvm does not have an access over the methods.
+-depending upon the method call jvm can call the method but jvm can not store the method logic in jvm memory.
+-jvm will simply call the and execute the method and immediately deallocate the method.
+-though the local variables are the method level variable so its not in the hand of jvm that jvm can initialized.
+
+constructors:
+-------------
+-constructor is a special kind of block which name is same as the class name,
+work of constructor:
+----------------------
+-which is responsible to inialize the non-static members of a class.
+-constructor is resposible to call another constructor.
+
+Why i am not calling a constructor as a member function:
+---------------------------------------------------------
+-A function/method should have the return datatype but constructor does not have a return datatype.
+-We can call a function from another static/non-static function/method.
+-But incase of constructor we can not call a constructor from any other functions/to a call a constructor we required another constructor.
+
+Note:
+-----
+we can create any number of constructors depending uopn our non-static variables.
+
+What is initialization?
+-----------------------
+-Assigning a value to a variable is known as intialization.
+int x;//declaring a variable x.
+x=5;;//initialization
+int x=5//here we are declaring and initializing a variable in the same time.
+
+-We can inialize a variable at the time of declaration or after the declaration.
+
+Default constructor:
+---------------------
+-Supppose in our program if we will not provide the constructor explicitely then while creating an object jvm will call thedefault 
+constructor.
+-it means whether you will provide the constructor or you will not provide the constructor that does not matter but while creating an objec
+it is mandatory that jvm will call a constructor.
+-if there are some constructor available in our program then there is no rolew of default constructor but if there is no constructor is 
+available then default construtor will come into picture.
+
+-To create the object in different ways we need to create different constructors.
+
+
+
+public class Constructor1 {
+
+	int x;
+	int y;
+	float z;
+	static int a;
+
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 */
+	public Constructor1(int x, int y, float z) {
+		super();
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+
+	/**
+	 * @param x
+	 * @param y
+	 */
+	public Constructor1(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+
+	/**
+	 * @param y
+	 * @param z
+	 */
+	public Constructor1(int y, float z) {
+		super();
+		this.y = y;
+		this.z = z;
+	}
+
+	/**
+	 * 
+	 */
+	public Constructor1() {
+		
+	}
+
+	public static void main(String[] args) {
+		// Constructor1 c1=new Constructor1();(here one parameterised
+		// constructor i have provided in my program so i can not create an
+		// object by calling zero
+		// argument constructor)
+		//class name+ reference of an object+new +constructor calling
+		//the new keyword we are using to create a constructor but We need to call the constructor for initialization.
+		Constructor1 c1 = new Constructor1(10, 23, 2.5f);
+		System.out.println("c1 values");
+		System.out.println(c1.x);
+		System.out.println(c1.y);
+		System.out.println(c1.z);
+		Constructor1 c2=new Constructor1();
+		System.out.println("c2 values");
+		System.out.println(c2.x);
+		System.out.println(c2.y);
+		System.out.println(c2.z);
+		
+		Constructor1 c3=new Constructor1(45, 7.2f);
+		System.out.println("c3 values");
+		System.out.println(c3.x);
+		System.out.println(c3.y);
+		System.out.println(c3.z);
+		
+
+	}
+
+}
+
+Types of constructor:
+----------------------
+Basically there are 3 types of constructor we are using in java.
+1.Default constructor:
+---------------------
+suppose in our program we will not provide any constructor explicitely from our side then java compiler will automatically provide a zero argument constructor with out any 
+logic.
+
+prog.java
+----------
+class Demo
+{
+  int i;
+  void m1()
+   {
+    //logic
+   }
+}
+compile
+prog.class
+----------
+class Demo
+{
+  int i;
+  Demo()
+  {
+  }
+  void m1()
+   {
+    //logic
+   }
+}
+2.Zero argument constructor 
+----------------------------
+-it is programmer written constructor,which looks like default constructor.
+prog.java
+----------
+class Demo
+{
+  int i;
+  Demo()
+  {
+  }
+  void m1()
+   {
+    //logic
+   }
+}
+compile
+prog.class
+----------
+class Demo
+{
+  int i;
+  Demo()
+  {
+  }
+  void m1()
+   {
+    //logic
+   }
+}
+
+
+3.parameterized constructor.
+----------------------------
+it is a programmer written constructor having some input parameter.
+
+Note:
+------
+if in our at least one constructor is there then there is no question about default constructor.
+
+java programming suit:
+----------------------
+java means it is the colllection of 3 different modules.
+1.j2se(java 2 standard edition)--->corejava(standalone app)
+2.j2ee(java 2 enterprise edition)--->Adv. java(Remote based app)
+3.j2me(java 2 mobile/micro edition)-->to develope mobile applications(outdated)
+
+Note:
+----
+by the help of j2se module we can able to work with j2ee and j2me module.
+
+-without the help of j2se we can not think about the other modules.
+-j2ee is an extention of j2se.
+
+The different memory areas in java:
+-----------------------------------
+object memory vs context memory
+-------------------------------
+object                             context
+-------                           ----------------
+-Dynamic memory allocation        -Dynamic memory allocation
+-per one class jvm can create     -per one class jvm can create only one context.
+n number of objects.    
+-object memories are responsible  -context memory is responsible to hold the static
+to hold the non-static members.    members.
+
+-When we will load a .class file from a secondary memory to main memory,jvm at the very will create the context memory.
+-After creating the context memory jvm loads all the static members.
+-After loading the static members jvm immediately searches for main method.
+-After reches to main method jvm starts executiong main method.
+
+Static controlflow vs non-static controlflow:
+---------------------------------------------
+-static controlflow
+--------------------
+-static block:
+-------------
+-At the very begning of my program execution, when jvm loads a .class file from secondary memory to main memory before creating the context before loading the other 
+static members and before starting the main method execution the static blocks will be executed,
+-Whenever there is a requirement that we want to execute some piece of code before main method execution at that time we need to go for static block.
+execution procedure:
+--------------------
+-When we will start the execution
+  -the first responsibility of jvm is to load the class.
+  -after loading the class jvm will identify all the static blocks present in that .class file and start executing all the static blocks from top to bottom.
+  -after the execution of static block jvm creates a context memory and after creating the context memory jvm will load all the static members to that context memory.
+  -after that jvm searches for main method in that cotext memory(this is the resn why main method is always static) and start execiting the main method.
+  -And other static methods are executing depending upon their method call.
+
+linker:
+------
+-it is an assembly level program.
+-this linker program is prsent with our operating system.
+-Linker knows about only the main fuction and linker program helps to link any other program like c,java,c++ with out os and then with our processor.
+-without linker program we can not link any program with the processor.
+-linker program identify a program by the help of main function.
+-if in our program we will not mention the main function then the linker can not able to identify our program and can not able to process our program.
+-so it is mandatory to write the syntax of main function in your program.
+-linker only knows what is main except main linker does not know any other functionality.
+-so this is the resn why if we want to execute any functionality we have to call that functionality from inside the main function.
+-And main function is known as the execution area.
+
+-Non-static/instance controlflow
+--------------------------------
+-first of all the object will be created by the jvm by the help of new keyword.
+-after creating the object jvm will searces for the non-static blocks and executes all the non-static blocks present inside that class from top to bottom.
+-then after finally jvm searches for constructor available in that program and executes the constructor.
+-Then after completing all above execution the object creation will be completed.
+-after creating an object depending upon the method call the non-static methods will be executed. 
+
+-Whenever we will face these kind of terms like non-static/instance these are directly related to object memory.
+-So if we want to create object memory then we required to write some explicite instruction by the help of new keyword inorder to create an object.
+Note:
+----
+-static block will be executed before the main method execute.
+-non-static block will be executed before the constructor execute.
+
+-static block can execute after the creation of context memory.
+-Non-static block can execute sfter the creation of object.
+
+-to create context we do not required to write any instruction.
+-But to create an object we required to wrirte some instruction.
+
+How we can take userinput in java:
+------------------------------------
+commandline argument
+scanner class
+Default Initialization
+typecasting
+polymerphism
+inheritance
+
+Default Initialization:
+-----------------------
+-Initialization means assighning some value to a variable.
+-if we will not assign the value to our variable then automatically jvm will assign some default values to our variables and that processs
+is known as default initialization.
+-Here the default intialization is applicable for static and non-static variable` but default intialization is not applicable to local
+varibles.
+-if we will declare the static and non static variable then also we can access these variables using some default values.
+-But the local variable we can not access with initializing the value.
+
+Note:
+-----
+In java actually we can not access any type of variable without any value but suppose we will go for static and non-static variable then 
+if we have not assighned any value to those variables then default value will be assigned but in case of local variable it is 
+mandatory to assighn some value to the variables.
+
+the default values for int is 0,for float is 0.0f,for any object type is null e.t.c
+
+
+-Default initialization is always performed by jvm.
+
+Typecasting:
+------------
+-The concept of converting the value of one datatype into another equivalent and corresponding datatype then we need to go for 
+typecasting concept.
+primitive:
+---------
+Numbers:
+-------
+Integer               Floating
+1.byte-->1 byte       1.float-->4byte
+2.short-->2byte       2.double-->8byte
+3.int-->4bytes
+4.long-->8bytes
+
+char
+
+boolean
+
+There are two types of type casting :
+-------------------------------------
+1.Implicite type casting
+-------------------------
+-The concept of changing the value of one datatype into another datatype by jvm without the programmer consult automatically is known as 
+Implicite typecasting.
+-When the value what i want to change is smaller than in which i want change that is implicite typecasting.
+-here as a programmer we donot required to write any explicite instruction
+2.Explicite type casting
+-------------------------
+The concept of changing the value of one datatype into another datatype by jvm with the programmer consult  is known as 
+Explicite typecasting.
+-if i want to change a bigger value datatype into a smaller value datatype then jvm will consult the programmer.
+-here as a programmer we have to write some extra instruction.
+
+How we can take user inputs in java
+------------------------------------
+data streams-->these are the flow of data from one end to other end
+
+water streams-->water is coming from one end to another end.
+
+Here in case of programming to control the flow of the data we have some input streams and we have some output streams.
+
+In case c we have the input stream scanf() and we have the output stream printf function.
+-Though c is a procedure oriented language this is why c has maintained their input and output stream in function format.
+
+But if we will go for c++ or java here these are the object the oriented laguage.
+-so here c++ and java maintained their input and output streams in object format.
+
+-c++ uses cin and cout object
+-java uses in and out object
+
+In java if i want print(output stream ) something then i need to call println function.
+
+System.out.println();
+
+-println is a non static function present in OutputStream class.
+-To access any non static function in java we required an object refernce.
+-so out is nothing but it is an object of OutputStream class.
+-so when we are accessing println() we are using out object.
+Why we are using System to access out object.
+---------------------------------------------
+because out is an object of OutStreamclass present in System class as a static variable.
+-To access any static member outside of the class we required class name.
+-so we are writing System.out
+
+so this is the resn why while accessing println we are using out object and while accessing out object we are using System class name.
+
+Scanner class:
+--------------
+-It is library class.
+-This scanner class present in java.util package.
+-By the help of this class we can take our user inputs.
+
+
+command line arguments:
+-------------------------
+-From the commandprompt if we want to pass some input values then we need to go for command line arguments.
+-Whatever input value we will pass those values will be received by the main method in string format.
+-This is the resn why main method argument is always String array argument.
+
+Polymerphism:
+---------------
+-This word polymerphism means poly means many and merphism means forms/behaviour/methods.
+
+Definition:
+============
+The concept of defining multiple methods with the same name is known as polymerphism.
+
+Polymerphism has devided into two types:
+------------------------------------------
+1.static polymerphism/compile time polymerphism
+-------------------------------------------------
+-This static polymerphism is also known as method overloading.
+
+static polymerphism
+--------------------
+-The concept of defining multiple methods with in the same class by changing the type of the parameter and the number of parameters we can define static polymerphism.
+-Whenever we will multiple methods having the same priority value there exactly our static polymerphism fails.
+
+package com.trident.basicprogram;
+
+public class PolymerphismExample {
+       void poly()
+       {
+    	   System.out.println("inside zeo arg");
+       }
+       
+      /* void poly(A a)
+       {
+    	   System.out.println("inside A arg");
+       }*/
+       
+       void poly(B b)
+       {
+    	   System.out.println("inside B arg");
+       }
+       
+       
+       public static void main(String[] args) {
+    	   PolymerphismExample p1=new PolymerphismExample();
+    	   
+    	   p1.poly(null);
+    	   
+	}
+}
+
+-to overcome this problem we have to go for dynamic polymerphism.
+-This process is also known as method overloading.
+
+method overloading
+------------------
+-The concept of defining multiple methods with the same name but by taking different types of parameter and the parameters(the number of parameter) is known an method overloading
+-This static polymerphism also we can say it an method overloading.
+cprog
+-----
+signature of a fuction
+-----------------------
+return type+function name+function parameter
+
+cprog
+-----
+signature of a method
+-----------------------
+mrthod name+method parameter
+
+
+
+2.dynamic polymerphism/runtime polymerphism
+------------------------------------------------
+-This dynamic polymerphism is also known as method overriding.
+-to understand this dynamic polymerphism we have to understand inheritance.
+
+Inheritance:
+-----------
+The concept of getting the property of one class in another class is known as inheritance.
+
+-the method associated with the class is known as the property of a class.
+
+there two common terms we are using when we are talking about inheritance.
+-these are 
+1.super class/parent class/base class
+--------------------------------------
+-the class which is getting extended by another class is known as super class
+2.sub class/child class/derived class
+-------------------------------------
+-the class which is extending another class is known as the sub class.
+
+-in case of java if we want to implement the concept of inheritance in java program the we need to go for extends keyword.
+-so, by the help of extends keyword we can  get the property of one class in another class.
+
+class Super
+ {
+   void m1()
+    {
+      s.o.p("inside m1()");
+    }
+}          IS-A
+class Sub extends Super{
+  void m2()
+    {
+      s.o.p("inside m2()");
+    }
+ }
+
+
+class Test
+{
+ main()
+   {
+      Sub s1=new Sub();
+      s1.m1();
+      s1.m2();
+   }
+}
+
+
+-This inheritance is also known as IS-A relationship.
+-The property of super class is directly available to sub class i.e we can call the super class property by the help of sub class object.
+
+What happens in case of inheritance.
+------------------------------------
+-In case of inheritance a chain of objects will be created with the association of super class and sub class.
+-In case of inheritance by the help of sub class object we can access super class property but by the help of super class object we can not access the sub class
+property.
+
+Types of inheritance:
+---------------------
+1.Single inheritance
+----------------------
+     super class
+          |
+          |
+     sub class
+
+class Super{
+   void m1(){--}
+  }
+
+class Sub extends Super{
+   void m2(){--}
+   main(){
+    Sub s1=new Sub();
+     s1.m1();
+     s1.m2();
+   }
+}
+2.multilevel inhereitance
+-------------------------
+     super1 class
+          |
+     Super2 class
+          |
+       sub class
+
+class Super1{
+   void m1(){--}
+  }
+
+class Super12 extends Super1{
+   void m3(){--}
+  }
+
+class Sub extends Super{
+   void m2(){--}
+   main(){
+    Sub s1=new Sub();
+     s1.m1();
+     s1.m2();
+     s1.m3();
+   }
+}
+
+
+3.multiple inheritance
+----------------------
+ super1 class     Super2 class
+
+          
+               
+          sub class
+developing by x developer who is sitting at bangalore
+class Super1{
+   void m1(){--}
+  }
+developing by y developer who is sitting at bbsr
+class Super2 {
+   void m1(){--}
+  }
+developing by the team lead  who is sitting at USA
+class Sub extends Super1,Super2{
+   void m2(){--}
+   main(){
+    Sub s1=new Sub();
+     s1.m1();//jvm will enter into a confusing state.//error
+     s1.m2();
+     
+   }
+}
+
+-This is not allowed in java because it leads jvm to a confusing state
+4.multipath inheritance
+------------------------
+           Class A
+             |
+             |  
+ class B     |       class C
+             |
+           class D
+
+class A{
+---}
+class B extends A{
+------
+}
+class C extends A{
+ ---
+}
+class D extends A,B,C{
+--------
+}
+
+-This type of inheritance is also not allowed in java
+
+
+5.hirarchical inheritance
+--------------------------
+           class A
+class B                 class C
+
+class A{
+------}
+class B extens A{
+---------}
+class C extends A{
+-------------}
+
+-it is allowed in java.
+-if a super class having multiple sub classes then it is known as hirarchical inheritance.
+
+6.hybrid inheritance
+--------------------
+-It is the combination of multiple inheritance and hirarchical inhiritance.
+
+class A         class B
+        class D
+class E         class F
+
+class A{
+-------}
+class B{
+-------}
+class D extends A,B{
+------
+}
+
+class E extends D{
+-------}
+class F extends D{
+-------}
+
+-It is also not allowed in java
+
+7.cyclic inheritance.
+---------------------
+The dependency between each other is known as cyclic inheritance.
+
+class A extends B{
+-------}
+class B extends A{
+---------}
+
+-As per the inheritabnce rules we can not create the sub class object without creating the super class object .
+-here in case of cyclic inheritance jvm will enter into an infinite loop so here object creation is immpossible.
+-this type of inheritance is also not allowed.
+
+Why we need to go for inheritance.?
+-----------------------------------
+-code reusability.
+
+class A{
+  void greeting(String name){
+       s.o.p(name+"good morning");
+    }
+}
+
+class B extends A{
+  main(){
+   {
+    B b =new B();
+    b.greeting("Suraj");//Suraj good morning
+   }
+}
+
+class C extends A{
+    main()
+      {
+        C c=new C();
+        c.greeting("Rajesh");//Rajesh good morning
+       }
+}
+
+method overriding:
+-----------------
+-The concept of defining multiple methods with the same name without changing the method signature ,not within a class is known as method
+overriding.
+
+-Incase of inheritance if one method will present at multiple objects then heighest priority will always goes to the submost object.
+
+object class
+------------
+-Object class is the default super class for every java class.
+-So that we are calling object class object as a root object.
+
+
+When i required to override and when i do not required to override.
+------------------------------------------------------------------
+-When i am satisfied with parent class property at that time i do not required to override and i do not required to define a new functionality with the same name.
+-But when I am not satisfied with parent class property at that time i need to override that method which is present in parent class and i required to provide my own logic.
+
+
+Assigning the subclass object to the superclass reference
+----------------------------------------------------------
+-if a method has defined exclusively in parent then by the help of child reference and parent reference we can access that method.
+-if a method has not defined in parent,which has exclusively defined in child only then we can access that method by the help of child reference but we can not 
+access by the help of parent reference.
+-if a method has defined both in parent and child then by using parent reference and by using child reference we can access that method but the heighes priority will
+always goes to child object.(method overidding) 
+
+AbstractClass and interface concept:
+------------------------------------
+
+class:
+-------
+-It is an userdefined datatype.-->Whenever we want to represent multiple dissimilar data elements in a single unit at that time we need to go for userdefined datatype
+concept.
+-It is a fully implemented structure.
+
+implementation
+---------------
+unimplemented method/abstract method
+abstract void add();--->prototype of a method
+//implemented method
+void add()
+ {
+  //body
+ }
+
+Abstract class 
+---------------
+-it is also an userdefined datatype.
+-it is a partially implemented and partially unimplemented structure.
+-To declare an abstract class we required abstract keyword.
+-here we can create an abstact class without taking an abstract method.
+-Without taking unimplemented method/ abstract method we can create an abstract class.
+abstract method:
+----------------
+-A method without body is known as abstract method.
+
+
+example 1
+----------
+package com.trident.basicprogram;
+//it is a partially implemented and partially unimplemented method
+public abstract class MyfirstAbst {
+     void m1(){
+    	 System.out.println("inside m1() method");
+     }
+     
+     abstract void m2();
+     public static void main(String[] args) {
+    	 //we can not create an object for an abstract class
+    	 //MyfirstAbst d1=new MyfirstAbst();
+    	 
+    	 //we can create a reference
+    	 MyfirstAbst d2;
+    	 
+	}
+}
+
+example 2
+----------
+package com.trident.basicprogram;
+
+public abstract class MyAbstSecond {
+       void m1(){
+    	   System.out.println("inside m1() of MyAbstSecond");
+       }
+       
+       void m2(){
+    	   System.out.println("m2() of MyAbstSecond");
+       }
+       
+       public static void main(String[] args) {
+    	   //here i can not create an object
+    	   //MyAbstSecond d1=new MyAbstSecond();
+	}
+}
+
+example of subclass to access the methods of abstract class:
+------------------------------------------------------------
+package com.trident.basicprogram;
+//without providing the body to MyfirstAbst.m2() i can not procced for MyfirstAbstSyb class
+public class MyfirstAbstSub extends MyfirstAbst{
+
+	void m2() {
+		System.out.println("m()...of subclass");
+	}
+	
+	void m3(){
+		System.out.println("m3() of MyfirstAbstSub");
+	}
+	
+	public static void main(String[] args) {
+		MyfirstAbstSub d1=new MyfirstAbstSub();
+		d1.m1();
+		d1.m2();
+		d1.m3();
+		//Assighning the subclass  object to the super class reference
+		MyfirstAbst d2=new MyfirstAbstSub();
+		d2.m1();
+		d2.m2();
+		//d2.m3();
+		
+	}
+}
+
+
+-for any abstract class we can not create an onject,so if we can not create an object then we also can not access the methods
+-so to access the methods of an abstract class we need to create a subclass of that abstract class.
+
+ques
+-----
+1)If without abstract/unimplemnted method we can able to create an abstract then why i need to go for abstract class instead of normal class?
+2)Why we can not able to create an object for an abstract class but how it is possible to create a reference?
+--------------------------------------------------------------------------------------------------------------
+-We can create a reference for any .class file but we can not create an object for any .class file.
+-object means instance of a class so we can create an object for a class only, we can not create an object for any .class file or for any .java file,if a .class contains
+the program for a class only then we can create an object for that .class file.
+-we can not create object for anything.
+3)if we can not create an object then we can not able to access the functionalities then what is the need to go for an abstract class?
+---------------------------------------------------------------------------------------------------------------------------------------
+-whenever you do not want to give access to others to modify your functionality but you want that anuone can use your functionality
+ at that time go for absract class and interfaces.
+-This is the resn why they have restricted us to create an object of an abstract class and interface.
+usecase:
+--------
+->suppose there are 3 car comanies present in india and these are 
+   1.maruti
+   2.mahindra
+   3.TATA
+->These 3 companies wants to manufacture their car in india.
+->but they can not manufacture without a license.
+->Indian govt will provide the licence.
+   rules(mandatory to follow) and guidelines(optional to follow)
+-----------------------------------------------------------------
+   1.whoever wants to manyfacture their car in india they can manufacture but the need to use BS6 engine.(rule)
+   2.car shoud have some color.(guide line)
+   3.car should have engine(guideline)
+   4.car should have a transparent glass window.(rule)
+
+package com.trident.basicprogram;
+
+public abstract class CarAbst {
+	//rules
+	abstract void BS4Eng();
+	//guidelines
+	void clr(){
+		System.out.println("black");
+	}
+	
+	void engine(){
+		System.out.println("latest 2020 engine");
+	}
+    abstract void glassWindow();
+}
+
+
+package com.trident.basicprogram;
+
+public class MarutiCar extends CarAbst{
+
+	void BS4Eng() {
+		System.out.println("yes i have BS4 engine");
+		
+	}
+
+	void glassWindow() {
+		System.out.println("yes i have tranperent window");		
+	}
+	
+	void clr(){
+		System.out.println("red");
+	}
+	
+
+}
+
+package com.trident.basicprogram;
+
+public class TATACar extends CarAbst{
+	void BS4Eng() {
+		System.out.println("yes i have BS4 engine");
+		
+	}
+
+	void glassWindow() {
+		System.out.println("yes i have tranperent window");		
+	}
+	
+	void engine(){
+		System.out.println("latest 2020 advance engine");
+	}
+
+
+}
+
+package com.trident.basicprogram;
+
+public class MahindraCar extends CarAbst{
+	void BS4Eng() {
+		System.out.println("yes i have BS4 engine");
+		
+	}
+
+	void glassWindow() {
+		System.out.println("yes i have tranperent window");		
+	}
+	
+	void clr(){
+		System.out.println("white");
+	}
+	
+	void engine(){
+		System.out.println("latest 2021 engine");
+	}
+
+}
+
+
+package com.trident.basicprogram;
+
+public class Test1 {
+public static void main(String[] args) {
+	MarutiCar m1=new MarutiCar();
+	TATACar t1=new TATACar();
+	MahindraCar mn=new MahindraCar();
+	System.out.println("-------maruti car------");
+	m1.BS4Eng();
+	m1.clr();
+	m1.engine();
+	m1.glassWindow();
+	System.out.println("------mahindra car------");
+	mn.BS4Eng();
+	mn.clr();
+	mn.engine();
+	mn.glassWindow();
+    System.out.println("-----TATA car--------");
+	t1.BS4Eng();
+	t1.clr();
+	t1.engine();
+	t1.glassWindow();
+	
+
+}
+}
+
+
+interface
+----------
+-it is also an userdefined datatype.
+-It is a fully unimplemented structure.
+--here all the methods are by default abstract.
+-here we are using a keyword that is implements keyword.
+-interface is also known as an aggrement
+
+What is the diffrerence between implements and extends keyword.
+----------------------------------------------------------------
+
+-Both extends and implements keyword we can use in the same time, in the same class.
+-but by using extends we are getting the property of one class in another class abd by using implements keyword we are providing the property to the abstract methods.
+
+Dynamic method dispatching:
+---------------------------
+-At runtime we are deciding which method is going to call depending upon the implemented class object.
+-we assighning the method budy at the runtime only after the object creation.
+-This is why we are calling it as dynamic method dispatching.
+-By the help of interface we can implement the concept of dynamic method dispatching/late binding concept.
+-The interface binding process is known as late binding because at runtime only we are binding the body of a method(implemented class) to its method declaration(interface)
+-Tne normal class binding process is known as early binding because the method declaration and the method body both are available at class level only.
+
+Difference between interface and abstract class:
+------------------------------------------------
+Abstract class	Interface
+1) Abstract class can have abstract and non-abstract methods.	      1)Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+2) Abstract class doesn't support multiple inheritance.	              2)Interface supports multiple inheritance.
+3) Abstract class can have final, non-final, static and non-static variables.3)Interface has only static and final variables.
+4) Abstract class can provide the implementation of interface.	       4)Interface can't provide the implementation of abstract class.
+5) The abstract keyword is used to declare abstract class.	       5)The interface keyword is used to declare interface.
+6) An abstract class can extend another Java class and implement multiple Java interfaces.6)An interface can extend another Java interface only.
+7) An abstract class can be extended using keyword "extends".	       7)An interface can be implemented using keyword "implements".
+8) A Java abstract class can have class members like private, protected, etc.8)Members of a Java interface are public by default.
+9)Example:                                                             9)Example:
+public abstract class Shape{                                             public interface Drawable{
+  public abstract void draw();
+                                                                             void draw();
+  }                                                                        }
+
+What is final
+--------------
+-In java final is a keyword.
+-This keyword can be applicable to a
+   1.class
+   2.method
+   3.variable
+
+final class Demo{
+  -if we will declare a class as a final class then noone can extends my class.	
+
+final void m1(){
+------
+}  
+   -if we will declare a method as a final method then noone can override that method.
+
+
+final int x=10;
+  -if you are declaring a variable as final variable then immediately assighning some value to that variable is mandatory but
+  -After assighning the value we can not reassighn that value i.e the value will be fixed for that particular variable.
+  -so in java if you want to declare a constant then you need to go for final variables.
+
+String
+-------
+-String is a library class which is nothing but a collection characters.
+-By the help of string datatype we can represent multiple characters in single memory unit.
+-String is immutable by nature.
+-immutable means content can not be changed.
+
+-Here in case of strings jvm always checks the content of an object.
+-But incase of other userdefined objects jvm checks the address.
+
+Why?
+
+-To understand this we have to understand equals() method of Object class.
+
+boolean equals(Object arg);---------->Object class------>Lang package.
+
+-When ever we will call object class equals method at that time equals method is responsible to compare the address.
+-But when we will call our own equals method at that time we can write the logic for content compariosion.
+
+Example:
+--------------
+public class Student {
+      String sname;
+      int srollno;
+	/**
+	 * @param sname
+	 * @param srollno
+	 */
+	public Student(String sname, int srollno) {
+		super();
+		this.sname = sname;
+		this.srollno = srollno;
+	}
+      
+	//s1.equals(s2),for which object a functionality has called is known as current object.
+	//here equals method has called because of s1 object so s1 is the current object.s
+      public boolean equals(Object obj) {
+    	  try{
+    		  
+    		  //s1 object data
+    		  String name1=this.sname;
+    		  int rollno1=this.srollno;
+    		  
+    		  //s2 object data
+    		  Student x=(Student)obj;
+    		  String name2=x.sname;
+    		  int rollno2=x.srollno;
+    		  
+    		  if(name1.equals(name2) && rollno1==rollno2)
+    		  {
+    			  return true;
+    		  }
+    		  else
+    		  {
+    			  return false;
+    		  }
+    	  }
+    	  catch(Exception e){
+    		  System.out.println(e);
+    		  return false;
+    	  }
+		
+	}
+
+
+	public static void main(String[] args) {
+		Student s1=new Student("Debashis", 101);
+		Student s2=new Student("Rajesh", 102);
+		Student s3=new Student("Debashis", 101);
+		Student s4=s1;
+		
+		if(s1==s2){
+			System.out.println("s1 is equals to s2");
+		}
+		
+		if(s1==s3){
+			System.out.println("s1 is equals to s3");
+		}
+		if (s1==s4){
+			System.out.println("s1 is equals to s4");
+		}
+
+		
+		if(s1.equals(s3)){
+			System.out.println("s1 is equals s3");
+		}else{
+			System.out.println("s1 is not equal s3");
+		}
+
+	}
+}
+
+
+String class:
+-------------
+
+case-1
+-------
+-String is an immutable class.
+-i.e once we will create a string object we can  not modify that string object.
+
+package com.trident.String;
+
+public class StringAndStringBuffer {
+  public static void main(String[] args) {
+	//here string objects are immutable in nature so that we can not modify the string content  
+	String s1="trident";
+	s1.concat("Academy");
+	System.out.println(s1);
+	
+	//here StringBuffere is not immutable/mutable so we can change the content of String Buffer object.
+	StringBuffer sb1=new StringBuffer("trident");
+	sb1.append("academy");
+	System.out.println(sb1);
+	
+	//in how many ways we can create a String object
+	//1. by using double cote
+	String s2="Hii";
+	//2.by using new keyword
+	String s3=new String("welcome");
+	System.out.println(s2);
+	System.out.println(s3);
+	
+	new String();
+	System.out.println(new String("TAT"));
+	
+	
+}
+}
+
+
+case-2
+-------
+Heap area and SCP area completed.
+
+-We can create a String object in two ways.
+-by using " "
+-by using new keyword.
+String s1=new String("trident");
+---------------------------------
+-In this case two objects will be created one is in heap area and the other one is in string constraint pool area(scp).
+-and s1(means the reference ) will always points to heap memory.
+
+String s1="trident";
+--------------------
+In this case one object will be created in SCP and here s1 is always points to that object because though we are using " " so there is no chance that 
+an object will create in heap area.
+
+Note:
+-----
+-Garbage collecter(any unhandled data(a data without any reference/variable) present in java program will be deallocated by GC) is no allowed to access in SCP area
+-eventhough there is no reference object available in SCP area then also GC can not able deallocate.
+-All the objects present in SCP area will be automatically deleted when the jvm will shutdown.
+
+-Object creation in SCP are is always optional,jvm always checks that is there any exsting object having the same content or not,if available then jvm will reuse that 
+object, if not available then jvm will create a new object.
+
+
+String s1=new String("trident");
+String s2=new String("trident");
+String s3="trident";
+String s4="trident";
+
+
+String s1=new String("durga");
+       s1.concate("software");
+       s1.concate("solution");
+String s2=s1.concate("soft");
+
+
+
+case-3
+------
+String s1=new String("trident");
+String s2=new String("trident");
+
+s.o.p(s1==s2);//false
+s.o.p(s1.equals(s2));//true
+
+-here the String class equals() method we are calling because in String class java people have overridden the equals() method,so that here 
+String equals method always responsible to check the content.
+so s1.equals(s2);//will true.
+
+Exception Handling
+------------------
+
+Exception
+----------
+-Exception is an event which stops the normal flow of execution and terminates the program in the middle abnormaly at run time.
+-To overcome this problem we have to go for Exception Handling mechanism.
+
+To handle this exception we have following concept
+---------------------------------------------------
+-try
+-catch
+-throws
+
+technically/programatically what is an exception:
+---------------------------------------------------
+-Strictly speaking exception is an object/ it is a class.
+
+Error
+----
+-There are two types of error
+1.compilation error.
+--------------------
+-Before execution if there are syntactical error then we will get compilation error.
+2.runtime error.
+----------------
+-During the time of execution if there are any logical error these are runtime error.
+-again runtime errors are devided into two types
+1.recoverable
+2.non-recoverable.
+
+What happens in case of exception:
+----------------------------------
+-When jvm will get some logical error at runtime which has identified by compiler then immediately jvm will create an exception object then jvm will searches for 
+the reference to handle that exception object.
+-If the reference is available then simply jvm will assign that exception object to that reference and continue the execution smoothly.
+-if there is no reference available then jvm will call garbage collector and deallocate the memory and stops the execution abnormally.
+
+Run time stack mechanism(RSM):
+-------------------------
+-it is also a part of jvm.
+
+class RSM
+ {
+   void stuff()
+     {
+       domoreStuff();
+     }
+   static void domoreStuff()  throws AE
+       {
+       
+      doStuff();
+     
+     }
+  static void doStuff() throws AE
+{
+        int x,y,z;
+       x=10;
+       y=0;
+       z=x/y;//ArithmaticException
+       s.o.p(z);
+
+        }
+ main()
+   {
+    RSM r1=new RSM();
+    r1.stuff();//hii
+   }
+}
+
+-we know that in doStuff() method we will get ArithmaticException object, so we required to handdle that exception in doStuff() method or if we do not want to handdle this
+exception here then we can forward it to domoreStuff(), there we can handdle or if we do not want to handdle there also we can 
+forward it to stuff(),there also we can handdle if we do not want handdle there then we can forward it to main() method,
+finally in main method we can handdle or here also we can forward to jvm but when we will forward it to jvm jvm will searches for 
+reference ,if reference will not available then jvm will call GC and terminates the program.
+
+package com.trident.basicprogram;
+
+public class RSM {
+    void stuff(){
+    	try{
+    	doStuff();
+    	}catch (ArithmeticException e) {
+		   System.out.println(e);
+		}
+    }
+
+	static void doStuff() throws ArithmeticException{
+		System.out.println("beging of doStuff");
+		doMoreStuff();
+		System.out.println("end of doStuff");
+	}
+
+	 static void doMoreStuff() throws ArithmeticException{
+		int x,y,z;
+		x=10;
+		y=0;
+		z=x/y;
+		System.out.println(z);
+		System.out.println("end of domoreStuff");
+		
+	}
+	 public static void main(String[] args) {
+		RSM r1=new RSM();
+		r1.stuff();
+		System.out.println("end of the program");
+	}
+}
+
+Errors are definitely non-recoverable.
+Exception:
+-----------
+-Every exception is a runtime error only.
+-here some of the exceptions are recoverable and some of the exceptions are not recoverable.
+
+Types of exception:
+-------------------
+Exception has devided into two types 
+1.checked exception
+--------------------
+-the exceptions which are identified by compiler at runtime these exceptions are known as checked exception.
+2.Unchecked exception
+----------------------
+-the exception which are not identified by compiler at runtime these are known as unchecked exception.
+
+Exception handling:
+-------------------
+-Exception handling does not means removing an exception from our program or does not means repainring one exception.
+-it means we are just handling one exception for a period of time for smooth execution of our program.
+
+usecase
+---------
+-suppose i am student of trident and i am staying at jaydev vihar.
+-suppose today i have a semester exam at 10am
+-the mode of transpotation i am using that is my bike.
+-then at what time i have to start my journy to reach the college to appear my exam.
+-arround 30 mints before i have to start.
+-suppose i have started at 9.30am.
+-but unfortunately my bike has punchred at nalco square at 9.45am.
+-here whatever problem i am facing that problem i can not solve or i can not remove at 9.45am because i have an exam at 10am.
+-so i will handle that problem by handover my bike to some one whome i know or i have to drop my bike at any service center or any shop.
+-And i have to choose any other mode of transpotation .
+-And i need to reach at college immediately and appear my exam.
+
+
+-In the same way if we will face any exception during the program execution time then we need to handle that exception by assinghning
+that exception object to an Exception class reference for smooth execution of our program.
+-Then when my execution will complete then only i will think about how to resolove that exception.
+
+To handle that exception we have to go for either try/catch block or throws keyword.
+
+
+class Demo
+ {
+   Demo d1;
+
+   void m1()
+    {
+     ----
+    }
+ 
+main()
+{
+d1.m1();//null.m1();//nullpointerexception
+}
+}
+Multi Tasking
+--------------
+-performing multiple task simultaneously called as multitasking.
+-In programming multitasking devided into two types
+1.process based multitasking
+2.thread based multitasking.
+
+-collection of threads are nothing but one process.
+1.process based multitasking
+------------------------------
+-performing multiple tasks simultaneously at the same time where each and every task known as a process.
+-process based multitasking is suitable for OS level.
+
+-suppose i am taking online class by using ms team,and watching some youtube vedios,chatting in facebook,downloading one file from 
+internet i.e i am using multiple applications(process) at the same time simultaneously.
+2.Thread based multitasking 
+----------------------------
+-performing multiple task simultaneously where each and every task will be treated as one one thread is called as thread based multitasking.
+-thread based multitaski is suitable for application level.
+
+-basically one thread means on functionality.
+-in java the default thread is nothing but main thread i.e whether we will declare main as a thread or not by default jvm will treated 
+main function as a thread.
+-But for other functionality what we are writing inside our java application those will not treated as thread,for those functionality
+we have to exclusively write some code to define that function as a thread function.
+
+-whatever code we are writting inside our functions/methods are known as our functionality.
+
+package com.trident.thread;
+
+public class NormalClass {
+     void m1(){
+    	 for(int i=0;i<10;i++)
+    	 {
+    		 System.out.println("Trident");
+    	 }
+     }
+     void m2()
+     {
+    	 for(int i=0;i<10;i++)
+    	 {
+    		 System.out.println("silicon");
+    	 }
+     }
+     
+     public static void main(String[] args) {
+    	 NormalClass n1=new NormalClass();
+    	 n1.m1();
+    	 for(int i=0;i<10;i++)
+    	 {
+    		 System.out.println("BPUT");
+    	 }
+    	 n1.m2();
+	}
+}
+
+for the above program the execution process is sequentioal i.e one after another it will execute the statements,so that we will get the output as
+Trident 10 times
+BPUT 10 times
+Silicon 10 times
+
+package com.trident.thread;
+
+public class ThreadClass1 extends Thread{
+     public void run(){
+    	 for(int i=0;i<10;i++)
+    	 {
+    		 System.out.println("Trident");
+    	 }
+
+     }
+}
+
+package com.trident.thread;
+
+public class ThreadClass2 extends Thread{
+      
+}
+
+
+package com.trident.thread;
+
+public class TestThread {
+     public static void main(String[] args) {
+    	 for(int i=0;i<10;i++)
+    	 {
+    		 System.out.println("BPUT");
+    	 }
+    	 
+    	 
+    	 ThreadClass1 t1=new ThreadClass1();
+    	 ThreadClass2 t2=new ThreadClass2();
+    	 t1.start();
+    	 t2.start();
+    	 t2.run();//no output we will get,here there is no run method available in ThreadClass2 so when we will call run method by using t2 object
+                  // jvm will call the run() method of thread class which does not have any body means an empty body,so we will not get any
+                  // compile time or runtime error but also we will not get any output.
+    	 
+    	 
+	}
+}
+
+
+here we can not expect the excat output.
+-here my execution will not be in sequential mannner.
+-any combination of my output i can get.
+
+How we can create a thread in java:
+-----------------------------------
+-in two ways we can create a thread in java 
+ 1.by extending thread class(class Mythread extends Thread)
+ 2.by implementing runnable interface.(class Mythread implements Runnable)
+
+-In case of library thread class there two important methods what we need to use incase of thread creation.
+1.run()
+--------
+-run() method is responsible to hold the thread logic.
+-it is mandatory to override run() method of thread class in our class.
+-if we will not override then no error we will get but in the same time no output also we will get.
+-if we will not override the run() in our class then thread class run() method will be called but thread class run method does not have any logic,thread class 
+run() method having one empty body.
+-so it is always recomended that if you want to provide any thread logic which you want to execute simultaneously then override thread class run method in your class
+and provide your own logic as thread logic.
+
+class Mythread extends Thread
+{
+void m1(){
+----------
+}
+}
+
+class Test{
+  main(){
+   Mythread t1=new Mythread();
+    t1.start();
+
+-----------------
+------------------
+}
+}
+2.start()
+---------
+-this start() method is also presesnt in thread class.
+-there are two major responsibilities performed by start() method and these are 
+1.start() method always instruct jvm to registeered a new thread with thread scheduler.
+-thread scheduler is a part of jvm,which responsible for thread execution.
+-when which thread will get executed that will be decided by thread scheduler of jvm.
+2.when we will call start() method internally start method will call the run() method.
+
+
+override run()
+--------------
+
+class Thread
+{
+ void start()
+  {
+    run();
+  }
+ void run()
+ {
+ }
+}
+
+class MyThread extends Thread
+{
+
+}
+
+class Test
+{
+ main()
+  {
+   MyThread t1=new MyThread();
+   t1.start();//this t1 object of Mythread class will be registered with threadscheduler of jvm
+              //jvm will call start method of thread class.
+              //start will internally call run()-->there are 3 run methods available here. 1.thread class run()
+                                                                                           2.MyThread class run()
+                                                                                           3.MyThread class run(int x)
+
+  t1.run(10);
+  }
+}
+
+
+
+A a=new A();
+
+a-->reference
+new to create a dynamic memory
+
+A()--->to initialize that memory
+
+creating a thread by implementing Runnable interface
+-----------------------------------------------------
+Thread            Runnable
+------            ----------
+start()           run()
+run()
+
+1st approach(By extending Thread class)
+----------------------------------------
+
+       MyRunnable
+           |
+         Thread
+           |
+       MyThread
+
+
+library
+-------
+interface MyRunnable
+  {
+    void run();
+  }
+
+class Thread  implements MyRunnable
+ {
+    void run()
+     {
+      //empty
+     }
+    void start()
+     {
+       1.create a thread
+       2.register that thread with TS
+       3.run();
+     }
+}
+
+
+programmer
+----------
+  class MyThread extends Thread
+   {
+     void run()
+       {
+         //own logic
+       }
+  }
+
+ class Test 
+  {
+    main()
+      {
+        MyThread  t1=new MyThread();
+        t1.start();
+      }
+}
+
+------------------------------------------------------
+   Runnable
+     |
+   MyThread
+
+class Mythread implements Runnable
+ {
+    void run()
+     {
+      //own logic
+     }
+}
+
+class Test
+ {
+   main()
+    {
+       Mythread r=new Mythread();
+       r.start();//CE
+       Thread t1=new Thread(r);//now r reference is available with t1 reference
+        t1.start();//now if i will start() method then start method will register r object as a thread object.
+    }
+}
+   
+--------------------------------------
+class A
+{
+//logic
+}
+
+class Mythread implemnts Runnable extends A
+ {
+    void run()
+     {
+      //own logic
+     }
+}
+
+class Test
+ {
+   main()
+    {
+       Mythread r=new Mythread();
+       r.start();//CE
+       Thread t1=new Thread(r);//now r reference is available with t1 reference
+        t1.start();//now if i will start() method then start method will register r object as a thread object.
+    }
+}
+
+
+class A
+{
+//logic
+}
+
+
+class B extends A
+{
+//logic
+main()
+{
+A a=new B();
+
+
+
+
+class Mythread1 extends Thread
+{
+  void run()
+   {
+    Common.m1();
+   }
+}
+
+class Mythread2 extends Thread
+{
+  void run()
+   {
+    Common.m1();
+   }
+}
+
+class Mythread3 extends Thread
+{
+  void run()
+   {
+    Common.m1();
+   }
+}
+
+
+Class Common
+{
+ static void m1()
+  {
+    for(int i=0;i<=10;i++)
+     {
+       s.o.p("hii"+i);
+       j=i++
+       s.o.p(j)
+     }
+  }
+}
+
+
+Class Test
+{
+  main()
+   {
+     Mythread1 t1=new Mythread1();
+     Mythread2 t2=new Mythread2();
+     Mythread3 t3=new Mythread3();
+     t1.start();
+     t2.start();
+     t3.start();
+    }
+}
+ 
+
+Applet
+-------
+What is an application or what is a software
+---------------------------------------------
+-An application is nothing but it is a collection programs to achive some particular requirement.
+
+How many types of application
+------------------------------
+1.Standalone App
+-----------------
+If an application is specific to only one computer i.e one user can access that application on the same time,no multiple user can access that application.
+-Again standalone application has devided into two types
+  1.console based standalone App
+  ---------------------------------
+  The application or the program in which we are giving the inputs and getting the outputs by using only command prompt these are known as console based standalone 
+  Application. 
+  2.Desktop based standalone App
+  ------------------------------
+  -here the graphical user interface(medium) concept came into picture but this type application we have to install first then only we can use.
+  
+
+Note:
+-----
+in-short we can say that any installable software is known as standalone app.
+2.Remote based App
+------------------
+
+
+
+-there are two types of content we are using in our user interfaces
+ 1.static content
+ ----------------
+  The content which is fixed for all the users is known as static content
+  
+ 2.dynamic content
+-----------------------
+  The content which changes from one user to another user is known as dynamic content.
+
+-By using Applet we can develope dynamic contents.
+-In java now noone is using applet to develope dynamic content.
+-people are using servlets and jsp/spring mvc/struts e.t.c to develope dynamic content.
+-people are using html and css to develope static content.
+
+
+html
+-----
+-html stands for hyper text markup language.
+-Whenever we want run something on a browser we required to develope web pages.
+-Nowadays we can develope webpages by using html code.
+-html having some tags to create some web pages.
+
+Whenever we want write some applet program we need to extends our class from library class Applet.
+
+There are two ways to define your class
+ 1.by extending Applet class.
+ 2.By extending JApplet class.
+
+Java I/O stream
+----------------
+-In general streams means the flow of water,flow of water from one location to anothe location i.e we can say from source to destination.
+-In the same way when we are working with application development or while writing normal programs data plays a vital role.
+-here also we have to manage our data,in programming we have to take some input data and through programming we have to generate some output data.
+-the flow of data in our programming is known as data streams or we can say that the I/O streams.
+
+-In our house before working with the water flow/water stream we have to take some permanet storage and we have to take some temporary 
+storage,
+-water tank has treated as permanent storage and the pipe line are treated as the temporary storage.
+
+-In the same way while working with datastreams we have some permanent storage and we have some temporary storage.
+-Database and files are treated as permanent storage and the variables and different datastructures are treated as the temporary storage.
+
+
+-Not only in java in every programming language all are using the concept of I/O stream to manage and maintan their datas.

@@ -1,0 +1,36 @@
+class car{
+	void colour() {
+		System.out.println("black");
+	}
+	void type() {
+		System.out.println("compact");
+	}
+}
+
+class Nano extends car{
+	void Info() {
+		engine e = new engine();	//nano class has a reference to another class engine
+		e.type();
+	}
+}
+
+		/*
+		 * nano is a car means both carry is a relationship but nano has a engine means
+		 * both have has a relationship
+		 */
+
+class engine{
+	void type() {
+		System.out.println("bs4");
+	}
+}
+public class relationDemo {
+
+	public static void main(String[] args) {
+		Nano n = new Nano();
+		n.colour();	// is-a relation
+		n.type();	// is-a relation
+		n.Info();	// has-a relation
+	}
+
+}

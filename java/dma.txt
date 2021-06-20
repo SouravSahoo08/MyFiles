@@ -1,0 +1,89 @@
+Static memory allocation:
+------------------------
+-When ever we are dealing with some primitive datatypes where already we have the information about the size of that datatype i.e how much memory that data will occupy
+at that time we need to go for static memory allocation.
+-int---->4 bytes/2 bytes
+-float---->4 bytes
+-char----->1 byte
+-Student--->here i can not predict how much memory the student data will occupy.
+struct Student---34
+{
+  int sroll;---->4
+  char[30] sname;->30
+}
+
+struct Student---38
+{
+  int sroll;---->4
+  char[30] sname;->30
+  float smarks;--->4
+}
+
+
+-here we can say when we are dealing with the fixed size of memory we need to go for static memory allocation.
+DMA
+-----
+-When our requirement is to go for a resizable(the size can be increased or the size can be decreased) memory at that time we need to go for dynamic memory allocation.
+-in general programmer are going for DMA when they are dealing with userdefined datatype.
+-But its not like that we can not allocate dynamic memory for primitive types.
+
+int arr[5]  struct Emp[5]---------->these are the static memory allocation.
+
+There is a library given c program is known as stdlib.h
+
+stdlib.h
+--------
+1.malloc()--->used for allocating memory for the userdefined datatypes like structure /union
+2.calloc()--->calloc used for allocating memory for arrays
+3.realloc()-->used for increase/decrease the size of an array.
+4.free()---->used to delete some memory.
+
+malloc()
+---------------
+prototype/signature:
+--------------------
+returntype   functionname(function argument)
+  {
+     //body
+  }
+-the entire part the prototype along with the function body is known as definition of a function.
+
+malloc() protype:
+-----------------
+void* malloc(size_t    size)
+               |
+             unsighned--->any positive integer
+
+void*----->it is nothing but it is a generic pointer.
+
+int x=;
+x=10
+x=2.6
+x="hii"
+
+int* malloc(size_t    size)
+Employee* malloc(size_t    size)
+Student* malloc(size_t    size)
+
+faculty*
+
+int---memory(void*)
+void*--->int data
+-by the help of type casting concept later i can change that void* into int*.
+
+
+Example:
+----------
+struct Emp
+ {
+   int eno;
+   char ename[30];
+   float esal;
+   char emailid[35];
+   char edeg[10];
+};
+
+  struct Emp* emp;
+  //emp*=void*
+  int  ptr*;
+  emp=(struct Emp*)malloc(sizeOf(struct Emp));
